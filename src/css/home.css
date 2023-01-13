@@ -1,0 +1,101 @@
+#heroSection{
+    width: 100%;
+    height: 95%;
+    display: flex;
+    justify-content: space-between;
+    gap: 3em;
+}
+#heroInfo{
+    display: flex;
+    flex-direction: column;
+    gap:3em;
+}
+#heroText {
+    font-size: 60px;
+    font-weight: 900;
+}
+#buttonsDiv {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+#buttonsDiv a {
+    width: 350%;
+    padding: 11px 0;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #000;
+    border-radius: 12px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--shade4);
+    transition: transform .3s, box-shadow .1s ease-in-out;
+    position: relative;
+}
+
+#buttonsDiv a::after {
+    content: '>';
+    position: absolute;
+    right: 30px;
+    font-size: 25px;
+    font-weight: 900;
+    transform: rotate(90deg);
+    transition: transform .3s ease-in-out;
+}
+
+#buttonsDiv a:active {
+    transform: scale(0.9);
+}
+
+#buttonsDiv a:is(:hover, :focus)::after {
+    transform: rotate(0deg)
+}
+#ratingDiv{
+    font-size: 20px;
+}
+#ratingDiv>div{
+    display: flex;
+    align-items: center;
+}
+#ratingDiv>div>*{
+    font-size: 25px;
+}
+.green_star{
+    color: rgb(0, 182, 122);
+}
+.star{
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    background-color: green;
+    position: relative;
+    border-radius: 2px;
+}
+.star:last-child{
+    background: linear-gradient(90deg, green 50% , #999 50%);
+}
+.star::before{
+    content: '\2605';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    font-size: 18px;
+}
+#heroImg{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    /* overflow: hidden; */
+}
+#heroImg img{
+    display: block;
+    width: 130%;
+    max-width: 130%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
